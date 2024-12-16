@@ -1,0 +1,11 @@
+.boton1 {
+    background-color: brown;
+    color: #fff;
+    padding: 8px;
+}
+
+.boton1 a:hover {
+    background-color: rgb(22, 107, 83);
+    color: #fff;
+    padding: 8px;
+}
