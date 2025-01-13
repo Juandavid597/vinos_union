@@ -1,25 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
 
-body {
-    background-color: #000;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
-
 
 h1, h2 {
     font-family: 'Cinzel' !important;
     font-weight: 300;
-    color: #fff !important;
 }
 
 h3, h4, h5, h6 {
     font-family: 'Outfit' !important;
-    color: #fff !important;
 }
 
 p {
     font-family: 'Outfit' !important;
-    color: #fff !important;
 }
 
 .letra1 {
@@ -32,7 +28,6 @@ p {
     justify-content: center; 
     align-items: center;
     height: 350px;
-    color: #fff;
 }
 
 .img_cont {
