@@ -400,10 +400,24 @@ h3, h4, h5, h6 {
    /*  css apartados Quienes somos  */
 
 
+@media (min-width: 1200px) {
+    /* Estilos para pantallas extra grandes */
+  }
+  
+  
 
 
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Estilos para pantallas de tamaño grande */
+  }
+  
 
-@media (max-width: 991px) {
+@media (min-width: 601px) and (max-width: 991px) {
+    /* Estilos para tabletas y pantallas medianas */
+  }
+
+
+@media (max-width: 600px) {
     .menu {
         padding: 30px;
     }
@@ -507,8 +521,14 @@ h3, h4, h5, h6 {
         text-align: center;
     }
 
-    .general-2, .general-3 {
+    .general-2  {
         display: none;
+    }
+
+
+    .general-3 {
+        min-height: 300px;
+        width: 100%;
     }
 
     .blog {
