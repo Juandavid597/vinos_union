@@ -51,7 +51,7 @@ h3, h4, h5, h6 {
     display: flex;
     justify-content: center; 
     align-items: center;
-    color: #fff;
+    color: #fff !important;
     font-size: 1.3em;
 }   
 
@@ -302,6 +302,7 @@ h3, h4, h5, h6 {
     color: #555;
 }
 
+
 .footer {
     padding: 100px 0;
     background-color: #000;
@@ -398,6 +399,41 @@ h3, h4, h5, h6 {
 
 
    /*  css apartados Quienes somos  */
+
+.historia-content {
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.historia-image img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    padding: 10px;
+    
+}
+
+.zone-image {
+    padding: 50px 0px;
+}
+
+.historia-txt {
+    padding: 50px 180px 100px 100px;
+}
+
+.historia-txt h2 {
+    color: #631212;
+    font-size: 55px;
+}
+
+
+
+
+    /* fin del css apartados Quienes somos  */
 
 
 @media (min-width: 1200px) {
