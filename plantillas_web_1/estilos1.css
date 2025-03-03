@@ -121,11 +121,12 @@ h3, h4, h5, h6 {
 }
 
 .header-content h1 {
-    font-size: 75px;
+    font-size: 55px;
     line-height: 80px;
     color:#fff;
     text-transform: uppercase;
     margin-bottom: 35px;
+    margin-top: 100px;
 }
 
 .header-content p {
@@ -285,6 +286,10 @@ h3, h4, h5, h6 {
     justify-content: space-between;
 }
 
+.blog-content h3 {
+    color: #631212;
+}
+
 .blog-1 {
     padding: 15px 55px;
 }
@@ -311,13 +316,22 @@ h3, h4, h5, h6 {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.footer-content ul {
+    color: #afafaf;
 }
 
 .link h3 {
     font-size: 18px;
     color: #fff;
     margin-bottom: 15px;
+}
+
+.link {
+    margin: 50px;
+    text-align: left;
 }
 
 .link a {
@@ -328,7 +342,11 @@ h3, h4, h5, h6 {
 }
 
 .link img {
-    width: 200px;
+    width: 100px;
+}
+
+.rrss {
+    display: inline-block !important;
 }
 
 /* botones personalizados  */
@@ -395,6 +413,37 @@ h3, h4, h5, h6 {
    }
 
 
+   .bottonew {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 9px;
+    background: #25D366;
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+    color: #fff;
+   }
+   
+.bottonew:hover {
+    box-shadow: 7px 5px 56px -14px #ffffff;
+    background: #000;
+    color: #25D366;
+   }
+   
+.bottonew:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #ffffff;
+    background: #000;
+    color: #25D366;
+
+   }
+
    /* botones personalizados fin  */
 
 
@@ -410,8 +459,8 @@ h3, h4, h5, h6 {
 .historia-image img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    max-width: 100%;
-    height: auto;
+    max-width: 500px;
+    height: 500px;
     border-radius: 50%;
     padding: 10px;
     
@@ -434,6 +483,38 @@ h3, h4, h5, h6 {
 
 
     /* fin del css apartados Quienes somos  */
+
+/*  css apartado productos */
+
+.catalogo {
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.group-catalogo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-articulo img {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    height: 100%;
+}
+
+.descripcion-catalogo {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+
+
+/*  fin css apartado productos */
+
 
 
 @media (min-width: 1200px) {
