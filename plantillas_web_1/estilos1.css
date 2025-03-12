@@ -419,28 +419,28 @@ h3, h4, h5, h6 {
     padding-bottom: 16px;
     padding-top: 16px;
     border-radius: 9px;
-    background: #25D366;
-    border: none;
+    background: #ffffff;
+    border: 2px solid #25D366;
     font-family: inherit;
-    font-weight: 700;
+    font-weight: 800;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.4s;
-    color: #fff;
+    color: #25D366;
    }
    
 .bottonew:hover {
-    box-shadow: 7px 5px 56px -14px #ffffff;
-    background: #000;
-    color: #25D366;
+    box-shadow: 7px 5px 56px -14px #25D366;
+    background: #25D366;
+    color: #ffffff;
    }
    
 .bottonew:active {
     transform: scale(0.97);
-    box-shadow: 7px 5px 56px -10px #ffffff;
-    background: #000;
-    color: #25D366;
+    box-shadow: 7px 5px 56px -10px #25D366;
+    background: #25D366;
+    color: #ffffff;
 
    }
 
@@ -530,7 +530,80 @@ h3, h4, h5, h6 {
   
 
 @media (min-width: 601px) and (max-width: 991px) {
-    /* Estilos para tabletas y pantallas medianas */
+
+    .menu .navbar ul li a {
+        font-size: 14px;
+        padding: 10px;
+        color: #fff;
+        display: block;
+        font-weight: 600;
+    }
+
+    .header-content p {
+        font-size: 16px;
+        color: #fff;
+        padding: 0 50px;
+        margin-bottom: 500px;
+    }
+
+
+    .header {
+        min-height: 70vh;
+    }
+
+    .txt-p {
+        font-size: 16px;
+        color: #555;
+        padding: 0 50px;
+        margin-bottom: 35px;
+    }
+
+    .abocado-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+
+    .productos-group {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+
+    .producto-1 {
+        padding: 0 40px;
+    }
+    
+    .producto-1 img {
+        width: 60px;
+        margin-bottom: 15px;
+        filter: invert(100%);
+    }
+
+
+    .general-1 {
+        width: 50%;
+        padding: 50px 25px 100px 25px;
+        background-color: #000000;
+    }
+
+    .blog-1 {
+        padding: 15px 35px;
+    }
+
+    .blog-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .blog-1 img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        width: 150px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+
   }
 
 
