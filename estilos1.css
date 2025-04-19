@@ -66,7 +66,7 @@ h3, h4, h5, h6 {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url(/plantillas_web_1/imagenes_web/edit_foto_2.jpg);
+        url(plantillas_web_1/imagenes_web/edit_foto_2.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -192,7 +192,7 @@ h3, h4, h5, h6 {
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url(/plantillas_web_1/imagenes_web/edit_foto_1.jpg);
+        url(plantillas_web_1/imagenes_web/edit_foto_1.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -264,7 +264,7 @@ h3, h4, h5, h6 {
 }
 
 .general-2 {
-    background-image: url(/plantillas_web_1/imagenes_web/edit_foto_3.jpg);
+    background-image: url(plantillas_web_1/imagenes_web/edit_foto_3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -272,7 +272,7 @@ h3, h4, h5, h6 {
 }
 
 .general-3 {
-    background-image: url(/plantillas_web_1/imagenes_web/2147764869.jpg);
+    background-image: url(plantillas_web_1/imagenes_web/2147764869.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
