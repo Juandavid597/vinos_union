@@ -5,6 +5,7 @@
     margin: 0 auto;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -99,7 +100,7 @@ h3, h4, h5, h6 {
 }
 
 .menu .navbar ul li a:hover {
-    color: #631212;
+    color: #BF9E60;
 }
 
 #menu {
@@ -287,7 +288,7 @@ h3, h4, h5, h6 {
 }
 
 .blog-content h3 {
-    color: #631212;
+    color: #BF9E60;
 }
 
 .blog-1 {
@@ -372,13 +373,13 @@ h3, h4, h5, h6 {
    
 .bottone1:hover {
     box-shadow: 7px 5px 56px -14px #ffffff;
-    color: #631212;
+    color: #BF9E60;
    }
    
 .bottone1:active {
     transform: scale(0.97);
     box-shadow: 7px 5px 56px -10px #ffffff;
-    color: #631212;
+    color: #BF9E60;
 
    }
 
@@ -402,13 +403,13 @@ h3, h4, h5, h6 {
    
 .bottone2:hover {
     box-shadow: 7px 5px 56px -14px #904444;
-    color: #631212;
+    color: #BF9E60;
    }
    
 .bottone2:active {
     transform: scale(0.97);
     box-shadow: 7px 5px 56px -10px #842b2b;
-    color: #631212;
+    color: #BF9E60;
 
    }
 
@@ -447,6 +448,96 @@ h3, h4, h5, h6 {
    /* botones personalizados fin  */
 
 
+   /*  css apartados Contacto  */
+
+   
+
+   /* formulario de contacto */
+
+.flexcontact {
+    display: flex;
+
+}
+
+.form-info {
+    width: 50%;
+}
+
+.form-info img {
+    width: 200px;
+    padding-bottom: 25px;
+}
+
+.form-colum {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    margin: 50px 50px;
+}
+
+.form1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.title {
+    font-size: 35px;
+    line-height: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    
+}
+
+.formulario {
+    width: 50%;
+    margin: 100px 50px;
+}
+
+form {
+    background-color: #000000;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px;
+    
+}
+
+.formulario  {
+    color: #fff;
+}
+
+form label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+   /*  css fin apartados Contacto  */
+
+
    /*  css apartados Quienes somos  */
 
 .historia-content {
@@ -475,7 +566,7 @@ h3, h4, h5, h6 {
 }
 
 .historia-txt h2 {
-    color: #631212;
+    color: #BF9E60;
     font-size: 55px;
 }
 
@@ -520,8 +611,7 @@ h3, h4, h5, h6 {
 @media (min-width: 1200px) {
     /* Estilos para pantallas extra grandes */
   }
-  
-  
+
 
 
 @media (min-width: 992px) and (max-width: 1199px) {
