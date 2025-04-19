@@ -5,6 +5,10 @@
     margin: 0 auto;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 * {
     margin: 0;
@@ -475,33 +479,6 @@ h3, h4, h5, h6 {
     margin: 50px 50px;
 }
 
-.form1 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: 1px solid #333;
-}
-
-.title {
-    font-size: 35px;
-    line-height: 30px;
-    color: #ffffff;
-    text-transform: uppercase;
-    
-}
-
 .formulario {
     width: 50%;
     margin: 100px 50px;
@@ -569,9 +546,6 @@ form input {
     color: #BF9E60;
     font-size: 55px;
 }
-
-
-
 
     /* fin del css apartados Quienes somos  */
 
@@ -715,6 +689,15 @@ form input {
         display: none;
     }
 
+    .header-content h1 {
+        font-size: 40px;
+        line-height: 80px;
+        color:#fff;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        margin-top: 100px;
+    }
+
     .menu .navbar ul li {
         width: 100%;
     }
@@ -745,7 +728,7 @@ form input {
 
     .abocado-content h2 {
         padding: 0px;
-        font-size: 40px;
+        font-size: 30px;
     }
 
 
@@ -776,7 +759,7 @@ form input {
     }
 
     .productos-content h2 {
-        font-size: 40px;
+        font-size: 30px;
         
     }
 
@@ -823,8 +806,10 @@ form input {
         padding: 0;
     }
 
+    /* footer xs */
+
     .footer {
-        padding: 30px;
+        padding: 5px;
 
     }
 
@@ -832,7 +817,207 @@ form input {
         flex-direction: column;
         text-align: center;
     }
+    .footer {
+        padding: 20px 0;
+        background-color: #000;
+    
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-content ul {
+        color: #afafaf;
+    }
+    
+    .link h3 {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    
+    .link {
+        margin: 5px;
+        text-align: left;
+    }
+    
+    .link a {
+        font-size: 16px;
+        color:#e0e0e0;
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    /* responsive quienes somos */
 
+    .historia-content {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    
+    .historia-image img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        max-width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        padding: 10px;
+        
+    }
+    
+    .zone-image {
+        padding: 5px 0px;
+    }
+    
+    .historia-txt {
+        padding: 5px 18px 10px 10px;
+    }
+    
+    .historia-txt h2 {
+        color: #BF9E60;
+        font-size: 55px;
+    }
 
+    /* responsive productos */
+    
+    .catalogo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .group-catalogo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .img-articulo img {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .text-articulo {
+        margin-bottom: 15px;
+    }
+    
+    .flexcontact {
+    display: flex;
+
+}
+
+.form-info {
+    width: 50%;
+}
+
+.form-info img {
+    width: 200px;
+    padding-bottom: 25px;
+}
+
+.form-colum {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    margin: 50px 50px;
+}
+
+.form1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.title {
+    font-size: 35px;
+    line-height: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    
+}
+
+.formulario {
+    width: 50%;
+    margin: 100px 50px;
+}
+
+form {
+    background-color: #000000;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px;
+    
+}
+
+.formulario  {
+    color: #fff;
+}
+
+form label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* responsive contacto xs*/
+
+.flexcontact {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-info {
+    width: 50%;
+}
+
+.form-info img {
+    width: 150px;
+    padding-bottom: 20px;
+}
+
+.form-colum {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    margin: 5px 5px;
+}
+
+.formulario {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+form {
+    background-color: #000000;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px;
+    
+}
 
 }
