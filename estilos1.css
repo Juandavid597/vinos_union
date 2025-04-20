@@ -581,23 +581,76 @@ form input {
 /*  fin css apartado productos */
 
 
-
-@media (min-width: 1200px) {
-    /* Estilos para pantallas extra grandes */
-  }
-
-
-
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Estilos para pantallas de tamaño grande */
-  }
-  
+}
+
 
 @media (min-width: 601px) and (max-width: 991px) {
 
+    .header-content h1 {
+        font-size: 40px;
+        line-height: 40px;
+        color:#fff;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+
+    
+
+    .header {
+        min-height: 40vh;
+    }
+    .footer {
+        padding: 5px;
+    }
+
+    .footer-content {
+        display: flex;
+    }
+
+    .colsm-6 {
+        width: 50% !important;
+    }
+
+    .footer {
+        padding: 20px 0;
+        background-color: #000;
+    
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-content ul {
+        color: #afafaf;
+        text-decoration: none;
+    }
+    
+    .link h3 {
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    
+    .link {
+        margin: 5px;
+        text-align: left;
+    }
+    
+    .link a {
+        font-size: 16px;
+        color:#e0e0e0;
+        display: block;
+        margin-bottom: 15px;
+    }
+
     .menu .navbar ul li a {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 12px;
+        padding: 8px;
         color: #fff;
         display: block;
         font-weight: 600;
@@ -608,11 +661,6 @@ form input {
         color: #fff;
         padding: 0 50px;
         margin-bottom: 500px;
-    }
-
-
-    .header {
-        min-height: 70vh;
     }
 
     .txt-p {
@@ -668,8 +716,174 @@ form input {
         margin-bottom: 15px;
     }
 
-  }
+    /* responsive quienes somos sm */
 
+    .historia-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .historia-image img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        max-width: 650px;
+        height: 650px;
+        border-radius: 50%;
+        padding: 10px;
+    }
+    
+    .zone-image {
+        padding: 5px 0px;
+    }
+    
+    .historia-txt {
+        padding: 5px 18px 10px 10px;
+    }
+    
+    .historia-txt h2 {
+        color: #BF9E60;
+        font-size: 55px;
+        text-align: center;
+    }
+
+    /* responsive productos */
+    
+    .catalogo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .group-catalogo {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .img-articulo img {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text-articulo {
+        margin-bottom: 35px;
+    }
+    
+    .flexcontact {
+    display: flex;
+
+    }
+
+.form-info {
+    width: 50%;
+}
+
+.form-info img {
+    width: 200px;
+    padding-bottom: 25px;
+}
+
+.form-colum {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    margin: 50px 50px;
+}
+
+.form1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.title {
+    font-size: 35px;
+    line-height: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    
+}
+
+.formulario {
+    width: 50%;
+    margin: 100px 50px;
+}
+
+form {
+    background-color: #000000;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px;
+    
+}
+
+.formulario  {
+    color: #fff;
+}
+
+form label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* responsive contacto sm*/
+
+.flexcontact {
+    display: flex;
+    margin-top: 50px;
+}
+
+.form-info {
+    width: 50%;
+}
+
+.form-info img {
+    width: 150px;
+    padding-bottom: 5px;
+}
+
+.form-colum {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    margin: 5px 5px;
+}
+
+.formulario {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+form {
+    background-color: #000000;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px;
+    
+}
+
+}
 
 @media (max-width: 600px) {
     .menu {
@@ -711,7 +925,7 @@ form input {
     }
 
     .header-content {
-        padding: 200px 30px;
+        padding: 70px 30px;
     }
 
     .header-content p {
@@ -719,7 +933,11 @@ form input {
     }
 
     .vinos-1 {
-        padding: 60px 10px;
+        padding: 50px 10px;
+    }
+
+    .vino-1 {
+        padding: 0px 5px;
     }
 
     .vino-1 img {
@@ -1020,4 +1238,4 @@ form {
     
 }
 
-}
+} 
