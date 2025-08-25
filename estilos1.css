@@ -1,5 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
 
+
+
+/* slide imagenes anchetas */
+
+.anchetas {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    align-items: center;
+}
+
+.group-anchetas {
+    display: flex;
+    align-items: stretch; /* ambos lados misma altura */
+    gap: 5px;
+}
+
+.img-anchetas {
+    flex: 1; 
+    display: flex;
+    align-items: center;  /* centra verticalmente */
+    
+}
+
+.text-articulo {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* --- Slider con fade --- */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: fade 12s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 3s; }
+.slide:nth-child(3) { animation-delay: 6s; }
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ajusta sin cortar */
+    display: block;
+}
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    30%  { opacity: 1; }
+    35%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+/* fin de slide para la pestaña de anchetas */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
