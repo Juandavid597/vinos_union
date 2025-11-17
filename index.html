@@ -3,24 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinos Unión</title>
+    
+    <!-- Meta Tags SEO Esenciales -->
+    <title>Vinos Unión - Vinos Artesanales del Valle del Cauca</title>
+    <meta name="description" content="Descubre los mejores vinos artesanales de La Unión, Valle del Cauca. Vinos abocados, blancos, rosados y cremas alcoholizadas de alta calidad.">
+    <meta name="keywords" content="vinos artesanales, vinos colombianos, vinos valle del cauca, vinos unión, cremas alcoholizadas, anchetas de vino">
+    <meta name="author" content="Vinos Unión">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Vinos Unión - Vinos Artesanales del Valle del Cauca">
+    <meta property="og:description" content="Descubre los mejores vinos artesanales de La Unión, Valle del Cauca. Vinos abocados, blancos, rosados y cremas alcoholizadas.">
+    <meta property="og:image" content="https://tudominio.com/plantillas_web_1/imagenes_web/1x/logo.png">
+    <meta property="og:url" content="https://tudominio.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vinos Unión">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vinos Unión - Vinos Artesanales del Valle del Cauca">
+    <meta name="twitter:description" content="Descubre los mejores vinos artesanales de La Unión, Valle del Cauca.">
+    <meta name="twitter:image" content="https://tudominio.com/plantillas_web_1/imagenes_web/1x/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="plantillas_web_1/imagenes_web/1x/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tudominio.com">
+    
+    <!-- Schema Markup para Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Winery",
+        "name": "Vinos Unión",
+        "description": "Vinos artesanales de La Unión, Valle del Cauca",
+        "url": "https://tudominio.com",
+        "telephone": "+57-300-494-1172",
+        "email": "vinosunion@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "La Unión",
+            "addressRegion": "Valle del Cauca",
+            "addressCountry": "CO"
+        },
+        "openingHours": "Mo-Su",
+        "priceRange": "$$",
+        "servesCuisine": "Vinos artesanales colombianos",
+        "sameAs": [
+            "https://www.instagram.com/alex_vinosunion/"
+        ]
+    }
+    </script>
+    
+    <!-- Estilos -->
     <link rel="stylesheet" href="estilos1.css">
     <link rel="stylesheet" href="plantillas_web_1/bootstrap-5.1.3-dist/css/bootstrap.css">
 </head>
-<body >
+<body>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
 
         <div class="menu container">
-            <img class="logo" src="plantillas_web_1/imagenes_web/1x/logo.png" alt="logo vinos union">
+            <img class="logo" src="plantillas_web_1/imagenes_web/1x/logo.png" alt="Vinos Unión - Logo de vinos artesanales del Valle del Cauca">
             
             <input type="checkbox" id="menu"/>
             <label for="menu">
-                <img src="plantillas_web_1/imagenes_web/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" class="menu-icono" alt="icon">
+                <img src="plantillas_web_1/imagenes_web/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" class="menu-icono" alt="Menú de navegación">
             </label>
-            <nav class="navbar">
-                <ul >
+            <nav class="navbar" role="navigation" aria-label="Menú principal">
+                <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="quienes_somos.html">Quiénes Somos</a></li>
                     <li><a href="productos.html">Productos</a></li>
@@ -33,171 +86,144 @@
         </div>
 
         <div class="header-content container">
-
-            <h1>Vinos Unión</h1>
-            <p class="mb-5">En la Unión Valle, bajo el cálido abrazo del sol y la dulce caricia de la brisa, nace la magia en cada botella de Vinos Unión.
-                Aquí, las vides escriben sus historias en las tierras generosas, mientras las manos apasionadas de nuestros viticultores cuidan cada detalle con amor y dedicación
-            </p>
-            <a href="quienes_somos.html" class="bottone2">información</a>
+            <h1>Vinos Unión - Vinos Artesanales del Valle del Cauca</h1>
+            <p class="mb-5">En La Unión Valle, bajo el cálido abrazo del sol y la dulce caricia de la brisa, nace la magia en cada botella de Vinos Unión. Aquí, las vides escriben sus historias en las tierras generosas, mientras las manos apasionadas de nuestros viticultores cuidan cada detalle con amor y dedicación.</p>
+            <a href="quienes_somos.html" class="bottone2">Conoce nuestra historia</a>
         </div>
 
     </header>
 
-    <section class="vinos-1">
-
+    <!-- Sección Tipos de Vinos -->
+    <section class="vinos-1" aria-labelledby="tipos-vinos">
         <div class="abocado-content container">
-
-            <h2>Diferentes tipos de vinos</h2>
-            <p class="txt-p">Nuestros vinos dulces son el  resultado de un proceso meticuloso, donde la destreza del enólogo se fusiona con la pasión artesanal. 
-                Cada fermentación es como una danza, una transformación mágica que da vida a vinos abocados, rosados y blancos, cada uno con su identidad única.</p>
+            <h2 id="tipos-vinos">Nuestros Vinos Artesanales</h2>
+            <p class="txt-p">Nuestros vinos dulces son el resultado de un proceso meticuloso, donde la destreza del enólogo se fusiona con la pasión artesanal. Cada fermentación es como una danza, una transformación mágica que da vida a vinos abocados, rosados y blancos, cada uno con su identidad única.</p>
 
             <div class="abocado-group mb-5">
                 <div class="vino-1">
-                    <img src="plantillas_web_1/imagenes_web/botella_edit_abocado.png" alt="">
-                    <h3>Abocado</h3>
-                    <p>Sumérgete en la experiencia sensorial de Abocado, un elixir enológico que cautiva los sentidos con su profunda elegancia. Con un matiz cromático que oscila entre los matices más ricos de la paleta, este vino se viste con una tonalidad intensa y sugerente que evoca la majestuosidad de la uva Isabela en su plenitud.
-                    </p>
+                    <img src="plantillas_web_1/imagenes_web/botella_edit_abocado.png" alt="Vino Abocado Vinos Unión - Elaborado con uva Isabela" width="200" height="400">
+                    <h3>Vino Abocado</h3>
+                    <p>Sumérgete en la experiencia sensorial de nuestro Vino Abocado, un elixir enológico que cautiva los sentidos con su profunda elegancia. Con un matiz cromático que oscila entre los matices más ricos de la paleta, este vino se viste con una tonalidad intensa y sugerente que evoca la majestuosidad de la uva Isabela en su plenitud.</p>
                 </div>
                 <div class="vino-1">
-                    <img src="plantillas_web_1/imagenes_web/botella_edit_blanco.png" alt="">
-                    <h3>Blanco</h3>
-                    <p>En cada copa de nuestro vino blanco, la esencia suave y refinada de la uva Isabela se despliega como una sinfonía de elegancia. Su tonalidad clara es el lienzo donde se pintan los delicados matices de sabor, creando una experiencia sensorial que acaricia el paladar con su dulzura. sutil y su carácter distinguido.
-                    </p>
+                    <img src="plantillas_web_1/imagenes_web/botella_edit_blanco.png" alt="Vino Blanco Vinos Unión - Elaborado con uva Isabela" width="200" height="400">
+                    <h3>Vino Blanco</h3>
+                    <p>En cada copa de nuestro vino blanco, la esencia suave y refinada de la uva Isabela se despliega como una sinfonía de elegancia. Su tonalidad clara es el lienzo donde se pintan los delicados matices de sabor, creando una experiencia sensorial que acaricia el paladar con su dulzura sutil y su carácter distinguido.</p>
                 </div>
                 <div class="vino-1">
-                    <img src="plantillas_web_1/imagenes_web/botella_edit_rosa.png" alt="">
-                    <h3>Rose</h3>
-                    <p>Nuestro vino Rose es un homenaje al equilibrio entre la sofisticación visual y el deleite gustativo, llevando al paladar a un viaje de placer sensorial donde la dulzura de la uva se convierte en un suspiro de refinamiento en cada gota.  
-                    </p>
+                    <img src="plantillas_web_1/imagenes_web/botella_edit_rosa.png" alt="Vino Rosado Vinos Unión - Elaborado con uva Isabela" width="200" height="400">
+                    <h3>Vino Rosado</h3>
+                    <p>Nuestro vino Rosado es un homenaje al equilibrio entre la sofisticación visual y el deleite gustativo, llevando al paladar a un viaje de placer sensorial donde la dulzura de la uva se convierte en un suspiro de refinamiento en cada gota.</p>
                 </div>
-
             </div>
-            <a href="productos.html" class="bottone1">información</a>
+            <a href="productos.html" class="bottone1">Ver todos nuestros productos</a>
         </div>
-
     </section>
 
-    <!-- Contenido -->
-    <main class="productos">
-
+    <!-- Sección Productos -->
+    <main class="productos" role="main">
         <div class="productos-content container">
-            <h2>Tipos de productos</h2>
+            <h2>Nuestros Productos</h2>
 
             <div class="productos-group">
                 <div class="producto-1">
-                    <img src="plantillas_web_1/imagenes_web/copa-con-vino.png" alt="">
-                    <h3>Vinos</h3>
+                    <img src="plantillas_web_1/imagenes_web/copa-con-vino.png" alt="Vinos artesanales Vinos Unión" >
+                    <h3>Vinos Artesanales</h3>
                 </div>
                 <div class="producto-1">
-                    <img src="plantillas_web_1/imagenes_web/copa-crema.png" alt="">
-                    <h3>Cremas</h3>
+                    <img src="plantillas_web_1/imagenes_web/copa-crema.png" alt="Cremas alcoholizadas Vinos Unión" >
+                    <h3>Cremas Alcoholizadas</h3>
                 </div>
                 <div class="producto-1">
-                    <img src="plantillas_web_1/imagenes_web/icon-ancheta.png" alt="">
-                    <h3>Anchetas</h3>
+                    <img src="plantillas_web_1/imagenes_web/icon-ancheta.png" alt="Anchetas de vino Vinos Unión">
+                    <h3>Anchetas Especiales</h3>
                 </div>
-                
-
             </div>
 
-            <p>
-                Te invitamos a explorar nuestra tienda y descubrir la calidad, el sabor y la tradición que ponemos en cada uno de nuestros productos. ¡Deleita tus sentidos y encuentra el licor perfecto para cada momento!
-            </p>
-            <a href="productos.html" class="bottone2">Información</a>
-
+            <p>Te invitamos a explorar nuestra tienda y descubrir la calidad, el sabor y la tradición que ponemos en cada uno de nuestros productos. ¡Deleita tus sentidos y encuentra el licor perfecto para cada momento!</p>
+            <a href="productos.html" class="bottone2">Descubre nuestros productos</a>
         </div>
-        
     </main>
 
-    <section class="general">
-
+    <!-- Sección Sobre Nosotros -->
+    <section class="general" aria-labelledby="sobre-nosotros">
         <div class="general-1">
-            <h2>Sobre nosotros</h2>
-            <p>Vinos Unión nació de una simple pero significativa experiencia familiar que transformó nuestra pasión en un proyecto que hoy nos llena de orgullo. En octubre de 2021, durante una visita a mi familia en La Unión, Valle del Cauca, decidí llevar algunos vinos de la región como obsequio para unos amigos en Medellín. </p>
-            <a href="quienes_somos.html" class="bottone2">Información</a>
+            <h2 id="sobre-nosotros">Nuestra Historia</h2>
+            <p>Vinos Unión nació de una simple pero significativa experiencia familiar que transformó nuestra pasión en un proyecto que hoy nos llena de orgullo. En octubre de 2021, durante una visita a mi familia en La Unión, Valle del Cauca, decidí llevar algunos vinos de la región como obsequio para unos amigos en Medellín.</p>
+            <a href="quienes_somos.html" class="bottone2">Conoce más sobre nosotros</a>
         </div>
-        <div class="general-2"></div>
-
+        <div class="general-2" role="img" aria-label="Viñedos de Vinos Unión en La Unión, Valle del Cauca"></div>
     </section>
-    <section class="general">
 
-        <div class="general-3"></div>
-
+    <!-- Sección Misión y Visión -->
+    <section class="general" aria-labelledby="mision-vision">
+        <div class="general-3" role="img" aria-label="Proceso de elaboración de vinos artesanales Vinos Unión"></div>
         <div class="general-1">
-            <h2>Misión Y visión</h2>
+            <h2 id="mision-vision">Misión y Visión</h2>
             <p>En Vinos Unión, nuestra misión es ofrecer vinos artesanales de alta calidad, resaltando la tradición vinícola de La Unión, Valle del Cauca, para crear momentos inolvidables. Nuestra visión es ser líderes en vinos colombianos, expandiéndonos globalmente para 2030 y conectando a más personas con nuestra cultura y pasión vinícola.</p>
-            <a href="contacto.html" class="bottone2">Información</a>
+            <a href="contacto.html" class="bottone2">Contáctanos</a>
         </div>
-        
-
     </section>
 
-
-    <section class="blog container">
-
-        <h2>Ofertas</h2>
+    <!-- Sección Ofertas -->
+    <section class="blog container" aria-labelledby="ofertas-especiales">
+        <h2 id="ofertas-especiales">Ofertas Especiales</h2>
         <p class="mb-5">Explora nuestras anchetas cuidadosamente seleccionadas, una combinación perfecta de vinos artesanales y cremas alcoholizadas para cada ocasión. Nos encanta sorprenderte, por eso renovamos nuestras ofertas según la temporada, asegurando siempre opciones únicas y especiales.</p>
 
         <div class="blog-content mb-5">
             <div class="blog-1">
-                <img src="plantillas_web_1/imagenes_web/baldesito-de-amor.png" alt="">
+                <img src="plantillas_web_1/imagenes_web/baldesito-de-amor.png" alt="Baldesito de Amor - Ancheta con 8 sabores de Vinos Unión" >
                 <h3>Baldesito de Amor</h3>
-                <h6>8 Delicioso sabores para obsequiar</h6>
+                <h6>8 Deliciosos sabores para obsequiar</h6>
                 <h4>$70.000</h4>
-
             </div>
             <div class="blog-1">
-                <img src="plantillas_web_1/imagenes_web/Suprema.png" alt="">
-                <h3>Trio Suprema</h3>
+                <img src="plantillas_web_1/imagenes_web/Suprema.png" alt="Trío Suprema - Ancheta premium Vinos Unión">
+                <h3>Trío Suprema</h3>
                 <h6>Disfruta en grande</h6>
                 <h4>$140.000</h4>
-
             </div>
             <div class="blog-1">
-                <img src="plantillas_web_1/imagenes_web/botellas-mini.png" alt="">
+                <img src="plantillas_web_1/imagenes_web/botellas-mini.png" alt="InstaMini - Mini botellas Vinos Unión para redes sociales" >
                 <h3>InstaMini</h3>
                 <h6>Comparte en redes y disfruta</h6>
-                <h4>$Free</h4>
-
+                <h4>Gratis con compras mayores a $100.000</h4>
             </div>
         </div>
 
-        <a href="ofertas.html" class="bottone1">información</a>
-
+        <a href="ofertas.html" class="bottone1">Ver todas las ofertas</a>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        
+    <footer class="footer" role="contentinfo">
         <div class="footer-content container">
             <div class="link colsm-6">
-                <img src="plantillas_web_1/imagenes_web/1x/logo.png" alt="">
-
+                <img src="plantillas_web_1/imagenes_web/1x/logo.png" alt="Vinos Unión - Vinos artesanales del Valle del Cauca" >
             </div>
             <div class="link colsm-6">
                 <h3>Teléfono</h3>
                 <ul>
-                    <li>Alexander Quintero Fernández<br> <a href="tel:573012595478">301 259 5478</a></li>
-                    <li>Stella Ortiz Cardona<br> <a href="tel:573004941172">300 494 1172</a></li>
+                    <li>Alexander Quintero Fernández<br> <a href="tel:+573012595478">301 259 5478</a></li>
+                    <li>Stella Ortiz Cardona<br> <a href="tel:+573004941172">300 494 1172</a></li>
                 </ul>
-
             </div>
             <div class="link colsm-6">
-                <h3>Correo</h3>
+                <h3>Correo Electrónico</h3>
                 <ul>
                     <li><a href="mailto:vinosunion@gmail.com">vinosunion@gmail.com</a></li>
                     <li><a href="mailto:alextennis007@gmail.com">alextennis007@gmail.com</a></li>
                 </ul>
-
             </div>
             <div class="link colsm-6">
-                <h3>Redes sociales</h3>
-                    <p class="rrss"><a href="https://wa.me/573004941172"><img height="30px" src="plantillas_web_1/imagenes_web/1x/whatsapp-3.svg" alt=""></a><a href="https://www.instagram.com/alex_vinosunion/"><img height="30px" src="plantillas_web_1/imagenes_web/1x/instagram-2016-5.svg" alt=""></a></p>
+                <h3>Redes Sociales</h3>
+                <p class="rrss">
+                    <a href="https://wa.me/573004941172" aria-label="Contactar por WhatsApp"><img height="30" src="plantillas_web_1/imagenes_web/1x/whatsapp-3.svg" alt="WhatsApp Vinos Unión"></a>
+                    <a href="https://www.instagram.com/alex_vinosunion/" aria-label="Seguir en Instagram"><img height="30" src="plantillas_web_1/imagenes_web/1x/instagram-2016-5.svg" alt="Instagram Vinos Unión"></a>
+                </p>
             </div>
-
         </div>
-
     </footer>
+
     <script src="plantillas_web_1/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
