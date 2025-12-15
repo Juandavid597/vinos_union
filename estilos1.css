@@ -171,10 +171,11 @@ h3, h4, h5, h6 {
 .abocado-group {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .vino-1 {
+    width: 25%;
     padding: 0px 50px;
 }
 
@@ -627,8 +628,6 @@ form input {
         margin-top: 50px;
     }
 
-    
-
     .header {
         min-height: 40vh;
     }
@@ -701,8 +700,14 @@ form input {
     }
 
     .abocado-group {
-        flex-direction: column;
-        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    .vino-1 {
+        width: 50%;
+        padding: 0px 25px;
     }
 
 
@@ -1014,6 +1019,11 @@ form {
         margin-bottom: 0;
     }
 
+    .vino-1 {
+        width: 100%;
+        padding: 0px 25px;
+    }
+
 
     .productos-group {
         display: flex;
@@ -1277,6 +1287,7 @@ form {
     }
 
     .vino-1 {
+        width: 100%;
         padding: 0px 5px;
     }
 
