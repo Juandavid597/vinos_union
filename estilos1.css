@@ -375,6 +375,7 @@ h3, h4, h5, h6 {
     cursor: pointer;
     transition: 0.4s;
     color: #fff;
+    white-space: nowrap;
    }
    
 .bottone1:hover {
@@ -405,6 +406,7 @@ h3, h4, h5, h6 {
     cursor: pointer;
     transition: 0.4s;
     color: #000000;
+    white-space: nowrap;
    }
    
 .bottone2:hover {
@@ -435,6 +437,7 @@ h3, h4, h5, h6 {
     cursor: pointer;
     transition: 0.4s;
     color: #25D366;
+    white-space: nowrap;
    }
    
 .bottonew:hover {
