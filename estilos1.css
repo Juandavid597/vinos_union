@@ -144,7 +144,7 @@ h3, h4, h5, h6 {
 
 .vinos-1 {
     padding: 100px 0;
-    background-color: #e0e0e0;
+    background-color: #fff;
     position: relative;
 }
 
@@ -343,7 +343,7 @@ h3, h4, h5, h6 {
 
 .link a {
     font-size: 16px;
-    color:#e0e0e0;
+    color:#fff;
     display: block;
     margin-bottom: 15px;
 }
@@ -675,7 +675,7 @@ form input {
     
     .link a {
         font-size: 16px;
-        color:#e0e0e0;
+        color:#fff;
         display: block;
         margin-bottom: 15px;
     }
@@ -990,7 +990,7 @@ form {
     
     .link a {
         font-size: 16px;
-        color:#e0e0e0;
+        color:#fff;
         display: block;
         margin-bottom: 15px;
     }
@@ -1417,7 +1417,7 @@ form {
     
     .link a {
         font-size: 16px;
-        color:#e0e0e0;
+        color:#fff;
         display: block;
         margin-bottom: 15px;
     }
