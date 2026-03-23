@@ -1,73 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
 
+/* ============================================================
+   VARIABLES & RESET
+   ============================================================ */
+
+:root {
+    --dorado: #BF9E60;
+    --negro: #000000;
+    --blanco: #ffffff;
+    --gris-texto: #555555;
+    --gris-claro: #afafaf;
+    --whatsapp: #25D366;
+    --radio: 9px;
+    --transicion: 0.4s;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* ============================================================
+   TIPOGRAFÍA
+   ============================================================ */
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+}
+
+h3, h4, h5, h6, p {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-body {
-    overflow-x: hidden;
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes movimiento {
+    from { background-position: top left; }
+    to   { background-position: bottom right; }
 }
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none !important;
-    list-style: none !important;
-}
-
-h1, h2 {
-    font-family: 'Cinzel' !important;
-    font-weight: 300;
-}
-
-h3, h4, h5, h6 {
-    font-family: 'Outfit' !important;
-}
-
-.p {
-    font-family: 'Outfit' !important;
-}
-
-.letra1 {
-    font-family: 'Outfit' !important;
-}
-
-
 
 .img_cont {
     position: relative;
-    animation: movimiento 22s infinite linear alternate
-}
-
-@keyframes movimiento {
-    from {
-        background-position: top left
-    }
-
-    to {
-        background-position: bottom right
-    }
-}
-
-.img_cont {
+    animation: movimiento 22s infinite linear alternate;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    color: #fff !important;
+    color: var(--blanco);
     font-size: 1.3em;
-}   
+}
 
+/* ============================================================
+   HEADER
+   ============================================================ */
 
-
-.header  {
-    background-image: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)),
-        url(plantillas_web_1/imagenes_web/edit_foto_2.jpg);
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                      url(plantillas_web_1/imagenes_web/edit_foto_2.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,13 +109,14 @@ h3, h4, h5, h6 {
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #fff;
+    color: var(--blanco);
     display: block;
     font-weight: 600;
 }
 
-.menu .navbar ul li a:hover {
-    color: #BF9E60;
+.menu .navbar ul li a:hover,
+.menu .navbar ul li a[aria-current="page"] {
+    color: var(--dorado);
 }
 
 #menu {
@@ -129,7 +140,7 @@ h3, h4, h5, h6 {
 .header-content h1 {
     font-size: 55px;
     line-height: 80px;
-    color:#fff;
+    color: var(--blanco);
     text-transform: uppercase;
     margin-bottom: 35px;
     margin-top: 100px;
@@ -137,15 +148,18 @@ h3, h4, h5, h6 {
 
 .header-content p {
     font-size: 16px;
-    color: #fff;
+    color: var(--blanco);
     padding: 0 250px;
     margin-bottom: 25px;
 }
 
+/* ============================================================
+   SECCIÓN VINOS
+   ============================================================ */
+
 .vinos-1 {
     padding: 100px 0;
-    background-color: #fff;
-    position: relative;
+    background-color: var(--blanco);
 }
 
 .abocado-content {
@@ -155,7 +169,7 @@ h3, h4, h5, h6 {
 .abocado-content h2 {
     font-size: 55px;
     line-height: 70px;
-    color: #000;
+    color: var(--negro);
     text-transform: uppercase;
     padding: 0 25px;
     margin-bottom: 15px;
@@ -163,7 +177,7 @@ h3, h4, h5, h6 {
 
 .txt-p {
     font-size: 16px;
-    color: #555;
+    color: var(--gris-texto);
     padding: 0 250px;
     margin-bottom: 35px;
 }
@@ -176,25 +190,26 @@ h3, h4, h5, h6 {
 
 .vino-1 {
     width: 25%;
-    padding: 0px 50px;
+    padding: 0 50px;
 }
 
 .vino-1 img {
     width: 200px;
 }
 
-
 .vinos-1 h3 {
-    color: #555;
+    color: var(--gris-texto);
     font-size: 30px;
     margin-bottom: 15px;
 }
 
+/* ============================================================
+   SECCIÓN PRODUCTOS (con fondo parallax)
+   ============================================================ */
+
 .productos {
-    background-image: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)),
-        url(plantillas_web_1/imagenes_web/edit_foto_1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                      url(plantillas_web_1/imagenes_web/edit_foto_1.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -209,23 +224,22 @@ h3, h4, h5, h6 {
 .productos-content h2 {
     font-size: 55px;
     line-height: 70px;
-    color: #fff;
+    color: var(--blanco);
     text-transform: uppercase;
     margin-bottom: 50px;
 }
 
 .productos-content h3 {
     font-size: 30px;
-    color: #fff;
+    color: var(--blanco);
     text-transform: uppercase;
 }
 
-
 .productos-content p {
     font-size: 20px;
-    color: #fff;
+    color: var(--blanco);
     margin-bottom: 50px;
-    padding: o 100px;
+    padding: 0 100px;
 }
 
 .productos-group {
@@ -245,14 +259,18 @@ h3, h4, h5, h6 {
 }
 
 .producto-1 h3 {
-    color: #ffffff;
+    color: var(--blanco);
     font-size: 25px;
     padding-top: 25px;
 }
 
+/* ============================================================
+   SECCIÓN GENERAL (historia / misión / visión)
+   ============================================================ */
+
 .general {
     display: flex;
-    color: #fff;
+    color: var(--blanco);
 }
 
 .general p {
@@ -262,7 +280,7 @@ h3, h4, h5, h6 {
 .general-1 {
     width: 50%;
     padding: 100px 250px 100px 100px;
-    background-color: #000000;
+    background-color: var(--negro);
 }
 
 .general-2 {
@@ -282,10 +300,13 @@ h3, h4, h5, h6 {
     min-height: 300px;
 }
 
+/* ============================================================
+   SECCIÓN BLOG / OFERTAS
+   ============================================================ */
+
 .blog {
     padding: 100px 0;
     text-align: center;
-
 }
 
 .blog-content {
@@ -294,7 +315,7 @@ h3, h4, h5, h6 {
 }
 
 .blog-content h3 {
-    color: #BF9E60;
+    color: var(--dorado);
 }
 
 .blog-1 {
@@ -309,16 +330,13 @@ h3, h4, h5, h6 {
     margin-bottom: 15px;
 }
 
-.blog1 h3 {
-    font-size: 25px;
-    color: #555;
-}
-
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 .footer {
     padding: 100px 0;
-    background-color: #000;
-
+    background-color: var(--negro);
 }
 
 .footer-content {
@@ -327,13 +345,7 @@ h3, h4, h5, h6 {
 }
 
 .footer-content ul {
-    color: #afafaf;
-}
-
-.link h3 {
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 15px;
+    color: var(--gris-claro);
 }
 
 .link {
@@ -341,9 +353,15 @@ h3, h4, h5, h6 {
     text-align: left;
 }
 
+.link h3 {
+    font-size: 18px;
+    color: var(--blanco);
+    margin-bottom: 15px;
+}
+
 .link a {
     font-size: 16px;
-    color:#fff;
+    color: var(--blanco);
     display: block;
     margin-bottom: 15px;
 }
@@ -353,181 +371,89 @@ h3, h4, h5, h6 {
 }
 
 .rrss {
-    display: inline-block !important;
+    display: inline-block;
 }
 
-/* botones personalizados  */
+/* ============================================================
+   BOTONES
+   ============================================================ */
 
-
+.bottone1,
+.bottone2,
+.bottonew {
+    display: inline-block;
+    padding: 16px 33px;
+    border-radius: var(--radio);
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transicion);
+    white-space: nowrap;
+}
 
 .bottone1 {
-    padding-left: 33px;
-    padding-right: 33px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    border-radius: 9px;
-    background: #000;
-    border: none;
-    font-family: inherit;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.4s;
-    color: #fff;
-    white-space: nowrap;
-   }
-   
+    background: var(--negro);
+    color: var(--blanco);
+}
+
 .bottone1:hover {
-    box-shadow: 7px 5px 56px -14px #ffffff;
-    color: #BF9E60;
-   }
-   
+    box-shadow: 7px 5px 56px -14px var(--blanco);
+    color: var(--dorado);
+}
+
 .bottone1:active {
     transform: scale(0.97);
-    box-shadow: 7px 5px 56px -10px #ffffff;
-    color: #BF9E60;
+    box-shadow: 7px 5px 56px -10px var(--blanco);
+    color: var(--dorado);
+}
 
-   }
+.bottone2 {
+    background: var(--blanco);
+    color: var(--negro);
+}
 
-
-   .bottone2 {
-    padding-left: 33px;
-    padding-right: 33px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    border-radius: 9px;
-    background: #ffffff;
-    border: none;
-    font-family: inherit;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.4s;
-    color: #000000;
-    white-space: nowrap;
-   }
-   
 .bottone2:hover {
     box-shadow: 7px 5px 56px -14px #904444;
-    color: #BF9E60;
-   }
-   
+    color: var(--dorado);
+}
+
 .bottone2:active {
     transform: scale(0.97);
     box-shadow: 7px 5px 56px -10px #842b2b;
-    color: #BF9E60;
+    color: var(--dorado);
+}
 
-   }
+.bottonew {
+    background: var(--blanco);
+    border: 2px solid var(--whatsapp);
+    color: var(--whatsapp);
+}
 
-
-   .bottonew {
-    padding-left: 33px;
-    padding-right: 33px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    border-radius: 9px;
-    background: #ffffff;
-    border: 2px solid #25D366;
-    font-family: inherit;
-    font-weight: 800;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.4s;
-    color: #25D366;
-    white-space: nowrap;
-   }
-   
 .bottonew:hover {
-    box-shadow: 7px 5px 56px -14px #25D366;
-    background: #25D366;
-    color: #ffffff;
-   }
-   
+    box-shadow: 7px 5px 56px -14px var(--whatsapp);
+    background: var(--whatsapp);
+    color: var(--blanco);
+}
+
 .bottonew:active {
     transform: scale(0.97);
-    box-shadow: 7px 5px 56px -10px #25D366;
-    background: #25D366;
-    color: #ffffff;
-
-   }
-
-   /* botones personalizados fin  */
-
-
-   /*  css apartados Contacto  */
-
-   
-
-   /* formulario de contacto */
-
-.flexcontact {
-    display: flex;
-
+    box-shadow: 7px 5px 56px -10px var(--whatsapp);
+    background: var(--whatsapp);
+    color: var(--blanco);
 }
 
-.form-info {
-    width: 50%;
-}
-
-.form-info img {
-    width: 200px;
-    padding-bottom: 25px;
-}
-
-.form-colum {
-    display: flex;
-    justify-content: space-between;
-    padding: 100px 50px;
-    margin: 50px 50px;
-}
-
-.formulario {
-    width: 50%;
-    margin: 100px 50px;
-}
-
-form {
-    background-color: #000000;
-    padding: 100px 50px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    
-}
-
-.formulario  {
-    color: #fff;
-}
-
-form label {
-    display: block;
-    color: white;
-    margin-bottom: 5px;
-}
-
-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-
-
-   /*  css fin apartados Contacto  */
-
-
-   /*  css apartados Quienes somos  */
+/* ============================================================
+   QUIÉNES SOMOS
+   ============================================================ */
 
 .historia-content {
     display: flex;
     margin-top: 35px;
     margin-bottom: 35px;
 }
-
 
 .historia-image img {
     aspect-ratio: 1 / 1;
@@ -536,11 +462,10 @@ form input {
     height: 500px;
     border-radius: 50%;
     padding: 10px;
-    
 }
 
 .zone-image {
-    padding: 50px 0px;
+    padding: 50px 0;
 }
 
 .historia-txt {
@@ -548,55 +473,42 @@ form input {
 }
 
 .historia-txt h2 {
-    color: #BF9E60;
+    color: var(--dorado);
     font-size: 55px;
 }
 
-    /* fin del css apartados Quienes somos  */
+/* ============================================================
+   CATÁLOGO DE PRODUCTOS
+   ============================================================ */
 
-/*  css apartado productos */
-
-/* .titulo-categoria {
-    text-align: left;
-    padding: 45px 0px;
-} */
+.titulo-categoria {
+    text-align: center;
+    padding: 25px 0;
+}
 
 .titulo-categoria h2 {
     font-size: 70px;
     font-weight: 800;
-    color: #BF9E60;
-    padding: 45px 0px;
+    color: var(--dorado);
+    padding: 45px 0;
 }
 
-.catalogo {
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
-}
-
+.catalogo,
 .catalogo-ancheta {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
-}
-
-.titulo-categoria {
-    text-align: center;
-    padding: 25px 0px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .group-catalogo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     justify-content: center;
-    margin: 15px 0px;
+    margin: 15px 0;
 }
 
-
 .img-articulo img {
-    display: flex;
-    justify-content: space-between;
     width: 200px;
-    height: 100%;
+    height: auto;
 }
 
 .descripcion-catalogo {
@@ -606,990 +518,537 @@ form input {
     -webkit-line-clamp: 3;
 }
 
+/* ============================================================
+   CONTACTO — formulario original
+   ============================================================ */
 
-
-/*  fin css apartado productos */
-
-@media(min-width: 1200px) {
-    
+.flexcontact {
+    display: flex;
+    margin-top: 50px;
 }
 
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    /* Estilos para pantallas de tamaño grande */
+.form-info {
+    width: 50%;
 }
 
+.form-info img {
+    width: 150px;
+    padding-bottom: 5px;
+}
 
+.form-colum {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    margin: 5px;
+}
 
-@media(max-width: 1199px) and (min-width:992px) {
+.formulario {
+    width: 50%;
+    margin: 100px 50px;
+    color: var(--blanco);
+}
+
+form {
+    background-color: var(--negro);
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radio);
+}
+
+form label {
+    display: block;
+    color: var(--blanco);
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    background: #1a1a1a;
+    color: var(--blanco);
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--dorado);
+}
+
+/* ============================================================
+   CONTACTO — tarjetas rápidas (nuevas)
+   ============================================================ */
+
+.contacto-rapido {
+    text-align: center;
+    padding: 60px 0 30px;
+}
+
+.contacto-rapido h2 {
+    font-size: 45px;
+    color: var(--negro);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.contacto-rapido > p {
+    font-size: 18px;
+    color: var(--gris-texto);
+    margin-bottom: 40px;
+}
+
+.contacto-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contacto-card {
+    background: var(--blanco);
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 35px 30px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contacto-card h3 {
+    font-size: 20px;
+    color: var(--negro);
+}
+
+.contacto-card p {
+    font-size: 14px;
+    color: var(--gris-texto);
+    text-align: center;
+}
+
+/* ============================================================
+   CONTACTO — validación del formulario (nuevas)
+   ============================================================ */
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-error {
+    color: #ff6b6b;
+    font-size: 13px;
+    margin-top: 4px;
+    display: none;
+}
+
+.form-error.visible {
+    display: block;
+}
+
+.form-exito {
+    display: none;
+    background: #1a3a1a;
+    border: 1px solid #4caf50;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    color: #81c784;
+    margin-top: 15px;
+}
+
+.form-exito.visible {
+    display: block;
+}
+
+.form-nota {
+    font-size: 12px;
+    color: var(--gris-claro);
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* ============================================================
+   RECETAS (nuevas)
+   ============================================================ */
+
+.recetas-intro {
+    text-align: center;
+    padding: 60px 0 30px;
+}
+
+.recetas-intro h2 {
+    font-size: 45px;
+    color: var(--negro);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.recetas-intro p {
+    font-size: 18px;
+    color: var(--gris-texto);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.receta-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.receta-section:last-of-type {
+    border-bottom: none;
+}
+
+.receta-grid {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.receta-grid.invertida {
+    flex-direction: row-reverse;
+}
+
+.receta-imagen {
+    flex: 0 0 45%;
+}
+
+.receta-imagen img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.receta-texto {
+    flex: 1;
+}
+
+.receta-texto h3 {
+    font-size: 28px;
+    color: var(--negro);
+    margin-bottom: 10px;
+}
+
+.receta-maridaje {
+    color: var(--dorado);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.receta-texto h4 {
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--negro);
+}
+
+.receta-texto ul,
+.receta-texto ol {
+    list-style: disc !important;
+    padding-left: 20px;
+    color: var(--gris-texto);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.receta-texto ol {
+    list-style: decimal !important;
+}
+
+.tips-maridaje {
+    background-color: #f7f4f0;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.tips-maridaje h2 {
+    font-size: 40px;
+    color: var(--negro);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.tips-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.tip-item {
+    flex: 1;
+    max-width: 280px;
+}
+
+.tip-item h4 {
+    font-size: 20px;
+    color: var(--dorado);
+    margin-bottom: 12px;
+}
+
+.tip-item p {
+    font-size: 15px;
+    color: var(--gris-texto);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET GRANDE (992px – 1199px)
+   ============================================================ */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+
+    .header { min-height: 180vh; }
+
     .header-content h1 {
         font-size: 40px;
         line-height: 40px;
-        color:#fff;
-        text-transform: uppercase;
         margin-bottom: 30px;
         margin-top: 50px;
     }
 
-    .header {
-        min-height: 180vh;
-    }
-    .footer {
-        padding: 5px;
-    }
+    .header-content p { padding: 0 50px; margin-bottom: 500px; }
 
-    .footer-content {
-        display: flex;
-    }
+    .txt-p { padding: 0 50px; }
 
-    .colsm-6 {
-        width: 50% !important;
-    }
+    .abocado-group { flex-wrap: wrap; }
 
-    .footer {
-        padding: 20px 0;
-        background-color: #000;
-    
-    }
-    
-    .footer-content {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footer-content ul {
-        color: #afafaf;
-        text-decoration: none;
-    }
-    
-    .link h3 {
-        font-size: 18px;
-        color: #fff;
-        margin-bottom: 15px;
-    }
-    
-    .link {
-        margin: 5px;
-        text-align: left;
-    }
-    
-    .link a {
-        font-size: 16px;
-        color:#fff;
-        display: block;
-        margin-bottom: 15px;
-    }
+    .vino-1 { width: 50%; padding: 0 25px; }
 
-    .menu .navbar ul li a {
-        font-size: 12px;
-        padding: 8px;
-        color: #fff;
-        display: block;
-        font-weight: 600;
-    }
+    .productos-group { justify-content: center; margin-bottom: 80px; }
 
-    .header-content p {
-        font-size: 16px;
-        color: #fff;
-        padding: 0 50px;
-        margin-bottom: 500px;
-    }
+    .producto-1 { padding: 0 40px; }
 
-    .txt-p {
-        font-size: 16px;
-        color: #555;
-        padding: 0 50px;
-        margin-bottom: 35px;
-    }
+    .producto-1 img { width: 60px; }
 
-    .abocado-group {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 25px;
-    }
+    .general-1 { width: 50%; padding: 50px 25px 100px; }
 
-    .vino-1 {
-        width: 50%;
-        padding: 0px 25px;
-    }
+    .blog-1 { padding: 15px 35px; }
 
+    .blog-1 img { width: 150px; }
 
-    .productos-group {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 80px;
-    }
+    .menu .navbar ul li a { font-size: 12px; padding: 8px; }
 
-    .producto-1 {
-        padding: 0 40px;
-    }
-    
-    .producto-1 img {
-        width: 60px;
-        margin-bottom: 15px;
-        filter: invert(100%);
-    }
+    .footer { padding: 20px 0; }
 
+    .link { margin: 5px; }
 
-    .general-1 {
-        width: 50%;
-        padding: 50px 25px 100px 25px;
-        background-color: #000000;
-    }
+    .colsm-6 { width: 50%; }
 
-    .blog-1 {
-        padding: 15px 35px;
-    }
+    .historia-content { flex-direction: column; }
 
-    .blog-content {
-        display: flex;
-        justify-content: center;
-    }
+    .historia-image img { max-width: 650px; height: 650px; }
 
-    .blog-1 img {
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        width: 150px;
-        border-radius: 15px;
-        margin-bottom: 15px;
-    }
+    .zone-image { padding: 5px 0; }
 
-    /* responsive quienes somos md */
+    .historia-txt { padding: 5px 18px 10px 10px; }
 
-    .historia-content {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .historia-image img {
-        aspect-ratio: 16 / 9;
-        object-fit: cover;
-        max-width: 650px;
-        height: 650px;
-        border-radius: 50%;
-        padding: 10px;
-    }
-    
-    .zone-image {
-        padding: 5px 0px;
-    }
-    
-    .historia-txt {
-        padding: 5px 18px 10px 10px;
-    }
-    
-    .historia-txt h2 {
-        color: #BF9E60;
-        font-size: 55px;
-        text-align: center;
-    }
+    .historia-txt h2 { font-size: 55px; text-align: center; }
 
-    /* responsive productos */
-    
-    
-    .group-catalogo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: center;
-        margin: 15px 0px;
-    }
+    .catalogo, .catalogo-ancheta { grid-template-columns: 1fr 1fr; }
 
-    .catalogo {
-        display: grid;
-        grid-template-columns:  1fr 1fr;
-    }
-
-    .catalogo-ancheta {
-    display: grid;
-    grid-template-columns:  1fr 1fr;
+    .text-articulo { margin-bottom: 35px; }
 }
 
-    
-    .img-articulo img {
-        display: flex;
-        justify-content: space-between;
-    }
+/* ============================================================
+   RESPONSIVE — TABLET PEQUEÑA (768px – 991px)
+   ============================================================ */
 
-    .text-articulo {
-        margin-bottom: 35px;
-    }
-    
-    .flexcontact {
-    display: flex;
+@media (max-width: 991px) and (min-width: 768px) {
 
-    }
-
-.form-info {
-    width: 50%;
-}
-
-.form-info img {
-    width: 200px;
-    padding-bottom: 25px;
-}
-
-.form-colum {
-    display: flex;
-    justify-content: space-between;
-    padding: 100px 50px;
-    margin: 50px 50px;
-}
-
-.form1 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: 1px solid #333;
-}
-
-.title {
-    font-size: 35px;
-    line-height: 30px;
-    color: #ffffff;
-    text-transform: uppercase;
-    
-}
-
-.formulario {
-    width: 50%;
-    margin: 100px 50px;
-}
-
-form {
-    background-color: #000000;
-    padding: 100px 50px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    
-}
-
-.formulario  {
-    color: #fff;
-}
-
-form label {
-    display: block;
-    color: white;
-    margin-bottom: 5px;
-}
-
-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* responsive contacto sm*/
-
-.flexcontact {
-    display: flex;
-    margin-top: 50px;
-}
-
-.form-info {
-    width: 50%;
-}
-
-.form-info img {
-    width: 150px;
-    padding-bottom: 5px;
-}
-
-.form-colum {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 5px;
-    margin: 5px 5px;
-}
-
-.formulario {
-    width: 100%;
-    margin: 10px 0px;
-}
-
-form {
-    background-color: #000000;
-    padding: 50px 25px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    
-}
-}
-
-
-@media (max-width: 991px) and (min-width:768px) {
+    .header { min-height: 40vh; }
 
     .header-content h1 {
         font-size: 40px;
         line-height: 40px;
-        color:#fff;
-        text-transform: uppercase;
         margin-bottom: 20px;
         margin-top: 50px;
     }
 
-    
+    .header-content p { padding: 0 50px; margin-bottom: 500px; }
 
-    .header {
-        min-height: 40vh;
-    }
-    .footer {
-        padding: 5px;
-    }
+    .txt-p { padding: 0 50px; }
 
-    .footer-content {
-        display: flex;
-    }
+    .abocado-group { flex-direction: column; margin-bottom: 0; }
 
-    .colsm-6 {
-        width: 50% !important;
-    }
+    .vino-1 { width: 100%; padding: 0 25px; }
 
-    .footer {
-        padding: 20px 0;
-        background-color: #000;
-    
-    }
-    
-    .footer-content {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footer-content ul {
-        color: #afafaf;
-        text-decoration: none;
-    }
-    
-    .link h3 {
-        font-size: 18px;
-        color: #fff;
-        margin-bottom: 15px;
-    }
-    
-    .link {
-        margin: 5px;
-        text-align: left;
-    }
-    
-    .link a {
-        font-size: 16px;
-        color:#fff;
-        display: block;
-        margin-bottom: 15px;
-    }
+    .productos-group { justify-content: center; margin-bottom: 80px; }
 
-    .menu .navbar ul li a {
-        font-size: 12px;
-        padding: 8px;
-        color: #fff;
-        display: block;
-        font-weight: 600;
-    }
+    .producto-1 { padding: 0 40px; }
 
-    .header-content p {
-        font-size: 16px;
-        color: #fff;
-        padding: 0 50px;
-        margin-bottom: 500px;
-    }
+    .producto-1 img { width: 60px; }
 
-    .txt-p {
-        font-size: 16px;
-        color: #555;
-        padding: 0 50px;
-        margin-bottom: 35px;
-    }
+    .general-1 { width: 50%; padding: 50px 25px 100px; }
 
-    .abocado-group {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
+    .blog-1 { padding: 15px 35px; }
 
-    .vino-1 {
-        width: 100%;
-        padding: 0px 25px;
-    }
+    .blog-1 img { width: 150px; }
 
+    .menu .navbar ul li a { font-size: 12px; padding: 8px; }
 
-    .productos-group {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 80px;
-    }
+    .footer { padding: 20px 0; }
 
-    .producto-1 {
-        padding: 0 40px;
-    }
-    
-    .producto-1 img {
-        width: 60px;
-        margin-bottom: 15px;
-        filter: invert(100%);
-    }
+    .link { margin: 5px; }
 
+    .colsm-6 { width: 50%; }
 
-    .general-1 {
-        width: 50%;
-        padding: 50px 25px 100px 25px;
-        background-color: #000000;
-    }
+    .historia-content { flex-direction: column; }
 
-    .blog-1 {
-        padding: 15px 35px;
-    }
+    .historia-image img { max-width: 650px; height: 650px; }
 
-    .blog-content {
-        display: flex;
-        justify-content: center;
-    }
+    .zone-image { padding: 5px 0; }
 
-    .blog-1 img {
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        width: 150px;
-        border-radius: 15px;
-        margin-bottom: 15px;
-    }
+    .historia-txt { padding: 5px 18px 10px 10px; }
 
-    /* responsive quienes somos sm */
+    .historia-txt h2 { font-size: 55px; text-align: center; }
 
-    .historia-content {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .historia-image img {
-        aspect-ratio: 16 / 9;
-        object-fit: cover;
-        max-width: 650px;
-        height: 650px;
-        border-radius: 50%;
-        padding: 10px;
-    }
-    
-    .zone-image {
-        padding: 5px 0px;
-    }
-    
-    .historia-txt {
-        padding: 5px 18px 10px 10px;
-    }
-    
-    .historia-txt h2 {
-        color: #BF9E60;
-        font-size: 55px;
-        text-align: center;
-    }
+    .catalogo, .catalogo-ancheta { display: flex; flex-direction: column; }
 
-    /* responsive productos */
-    
-    .catalogo {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .group-catalogo {
-        display: flex;
-        justify-content: space-between;
-        margin: 15px 0px;
-    }
-    
-    .img-articulo img {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .text-articulo {
-        margin-bottom: 35px;
-    }
-    
-    .flexcontact {
-    display: flex;
-
-    }
-
-.form-info {
-    width: 50%;
+    .text-articulo { margin-bottom: 35px; }
 }
 
-.form-info img {
-    width: 200px;
-    padding-bottom: 25px;
-}
+/* ============================================================
+   RESPONSIVE — MÓVIL (< 768px)
+   ============================================================ */
 
-.form-colum {
-    display: flex;
-    justify-content: space-between;
-    padding: 100px 50px;
-    margin: 50px 50px;
-}
+@media (max-width: 767px) {
 
-.form1 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
+    /* Menú hamburguesa */
+    .menu { padding: 30px; }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: 1px solid #333;
-}
-
-.title {
-    font-size: 35px;
-    line-height: 30px;
-    color: #ffffff;
-    text-transform: uppercase;
-    
-}
-
-.formulario {
-    width: 50%;
-    margin: 100px 50px;
-}
-
-form {
-    background-color: #000000;
-    padding: 100px 50px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    
-}
-
-.formulario  {
-    color: #fff;
-}
-
-form label {
-    display: block;
-    color: white;
-    margin-bottom: 5px;
-}
-
-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* responsive contacto sm*/
-
-.flexcontact {
-    display: flex;
-    margin-top: 50px;
-}
-
-.form-info {
-    width: 50%;
-}
-
-.form-info img {
-    width: 150px;
-    padding-bottom: 5px;
-}
-
-.form-colum {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 5px;
-    margin: 5px 5px;
-}
-
-.formulario {
-    width: 100%;
-    margin: 10px 0px;
-}
-
-form {
-    background-color: #000000;
-    padding: 50px 25px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    
-}
-
-}
-
-@media(max-width: 767px) {
-    .menu {
-        padding: 30px;
-    }
-
-    .menu label {
-        display: initial;
-    }
+    .menu label { display: initial; }
 
     .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #000000;
+        background-color: var(--negro);
         display: none;
     }
+
+    .menu .navbar ul li { width: 100%; }
+
+    #menu:checked ~ .navbar { display: initial; }
+
+    /* Header */
+    .header { min-height: 0; }
+
+    .header-content { padding: 70px 30px; }
 
     .header-content h1 {
         font-size: 40px;
         line-height: 80px;
-        color:#fff;
-        text-transform: uppercase;
         margin-bottom: 35px;
         margin-top: 100px;
     }
 
-    .menu .navbar ul li {
-        width: 100%;
-    }
+    .header-content p { padding: 0; }
 
-    #menu:checked ~ .navbar {
-        display: initial;
-    }
+    /* Vinos */
+    .vinos-1 { padding: 50px 10px; }
 
-    .header {
-        min-height: 0vh;
-    }
+    .abocado-content h2 { padding: 0; font-size: 30px; }
 
-    .header-content {
-        padding: 70px 30px;
-    }
+    .txt-p { padding: 0; }
 
-    .header-content p {
-        padding: 0;
-    }
+    .abocado-group { flex-direction: column; margin-bottom: 0; }
 
-    .vinos-1 {
-        padding: 50px 10px;
-    }
+    .abocado-img { display: none; }
 
-    .vino-1 {
-        width: 100%;
-        padding: 0px 5px;
-    }
+    .vino-1 { width: 100%; padding: 0 5px; }
 
-    .vino-1 img {
-        width: 150px;
-    }
+    .vino-1 img { width: 150px; }
 
-    .abocado-content h2 {
-        padding: 0px;
-        font-size: 30px;
-    }
+    /* Productos */
+    .productos { padding: 60px 10px; }
 
+    .productos-content h2 { font-size: 30px; }
 
-    .txt-p {
-        padding: 0;
-    }
+    .productos-content p { padding: 0; }
 
-    .abocado-group {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
+    .productos-group { flex-direction: column; margin-bottom: 0; }
 
-    .abocado-img {
-        display: none;
-    }
+    .producto-1 { margin-bottom: 25px; padding: 0; }
 
-    .productos {
-        padding: 60px 10px;
-    }
+    .producto-1 img { width: 80px; }
 
-    .productos-content p {
-        padding: 0;
-    }
+    /* General */
+    .general { flex-direction: column; }
 
-    .productos-group {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
+    .general-1 { width: 100%; padding: 30px; text-align: center; }
 
-    .productos-content h2 {
-        font-size: 30px;
-        
-    }
+    .general-2 { display: none; }
 
-    .producto-1 {
-        margin-bottom: 25px;
-    }
+    .general-3 { min-height: 300px; width: 100%; }
 
+    /* Blog */
+    .blog { padding: 30px; }
 
-    .producto-1 img {
-        width: 80px;
-        margin-bottom: 15px;
-        filter: invert(100%);
-    }
+    .blog-content { flex-direction: column; }
 
-    .general  {
-        flex-direction: column;
-    }
+    .blog-1 { padding: 0; }
 
-    .general-1 {
-        width: 100%;
-        padding: 30px;
-        text-align: center;
-    }
+    /* Footer */
+    .footer { padding: 20px 0; }
 
-    .general-2  {
-        display: none;
-    }
+    .footer-content { flex-direction: column; text-align: center; }
 
+    .link { margin: 5px; text-align: left; }
 
-    .general-3 {
-        min-height: 300px;
-        width: 100%;
-    }
+    /* Quiénes somos */
+    .historia-content { flex-direction: column; }
 
-    .blog {
-        padding: 30px;
-    }
+    .historia-image img { max-width: 280px; height: 280px; }
 
-    .blog-content {
-        flex-direction: column;
-    }
+    .zone-image { padding: 5px 0; }
 
-    .blog-1 {
-        padding: 0;
-    }
+    .historia-txt { padding: 5px 18px 10px 10px; }
 
-    /* footer xs */
+    .historia-txt h2 { font-size: 55px; }
 
-    .footer {
-        padding: 5px;
+    /* Catálogo */
+    .catalogo, .catalogo-ancheta { display: flex; flex-direction: column; }
 
-    }
+    .group-catalogo { flex-direction: column; margin: 15px 0; }
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer {
-        padding: 20px 0;
-        background-color: #000;
-    
-    }
-    
-    .footer-content {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footer-content ul {
-        color: #afafaf;
-    }
-    
-    .link h3 {
-        font-size: 18px;
-        color: #fff;
-        margin-bottom: 15px;
-    }
-    
-    .link {
-        margin: 5px;
-        text-align: left;
-    }
-    
-    .link a {
-        font-size: 16px;
-        color:#fff;
-        display: block;
-        margin-bottom: 15px;
-    }
-    
-    /* responsive quienes somos */
+    .text-articulo { margin-bottom: 15px; }
 
-    .historia-content {
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    
-    .historia-image img {
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        max-width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        padding: 10px;
-        
-    }
-    
-    .zone-image {
-        padding: 5px 0px;
-    }
-    
-    .historia-txt {
-        padding: 5px 18px 10px 10px;
-    }
-    
-    .historia-txt h2 {
-        color: #BF9E60;
-        font-size: 55px;
-    }
+    /* Contacto */
+    .flexcontact { flex-direction: column; }
 
-    /* responsive productos */
-    
-    .catalogo {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .group-catalogo {
-        display: flex;
-        flex-direction: column;
-        margin: 15px 0px;
-    }
-    
-    .img-articulo img {
-        display: flex;
-        justify-content: space-between;
-        
-    }
+    .form-info { width: 100%; }
 
-    .text-articulo {
-        margin-bottom: 15px;
-    }
-    
-    .flexcontact {
-    display: flex;
+    .formulario { width: 100%; margin: 10px 0; }
 
+    form { padding: 50px 25px; }
+
+    /* Recetas */
+    .receta-grid,
+    .receta-grid.invertida { flex-direction: column; }
+
+    .receta-imagen img { height: 250px; }
+
+    .tips-grid { flex-direction: column; align-items: center; }
+
+    .recetas-intro h2 { font-size: 30px; }
+
+    .tips-maridaje { padding: 40px 20px; }
+
+    /* Tarjetas contacto */
+    .contacto-card { width: 100%; }
+
+    .contacto-rapido h2 { font-size: 30px; }
 }
 
-.form-info {
-    width: 50%;
-}
-
-.form-info img {
-    width: 200px;
-    padding-bottom: 25px;
-}
-
-.form-colum {
-    display: flex;
-    justify-content: space-between;
-    padding: 100px 50px;
-    margin: 50px 50px;
-}
-
-.form1 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    background-color: #1a1a1a;
-    color: #fff;
-    border: 1px solid #333;
-}
-
-.title {
-    font-size: 35px;
-    line-height: 30px;
-    color: #ffffff;
-    text-transform: uppercase;
-    
-}
-
-.formulario {
-    width: 50%;
-    margin: 100px 50px;
-}
-
-form {
-    background-color: #000000;
-    padding: 100px 50px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    
-}
-
-.formulario  {
-    color: #fff;
-}
-
-form label {
-    display: block;
-    color: white;
-    margin-bottom: 5px;
-}
-
-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* responsive contacto xs*/
-
-.flexcontact {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-info {
-    width: 50%;
-}
-
-.form-info img {
-    width: 150px;
-    padding-bottom: 20px;
-}
-
-.form-colum {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 5px;
-    margin: 5px 5px;
-}
-
-.formulario {
-    width: 100%;
-    margin: 10px 0px;
-}
-
-form {
-    background-color: #000000;
-    padding: 50px 25px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    
-}
-}

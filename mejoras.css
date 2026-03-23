@@ -1,0 +1,254 @@
+/* ============================================================
+   MEJORAS.CSS — Interacciones y animaciones
+   No modifica el diseño existente. Añadir después de estilos1.css
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. MENÚ ACTIVO — subrayado dorado en página actual
+   ---------------------------------------------------------- */
+
+.menu .navbar ul li a[aria-current="page"] {
+    color: #BF9E60;
+    position: relative;
+}
+
+.menu .navbar ul li a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: #BF9E60;
+    border-radius: 2px;
+}
+
+/* Menú móvil abierto — subrayado adaptado */
+@media (max-width: 767px) {
+    .menu .navbar ul li a[aria-current="page"]::after {
+        bottom: 8px;
+        left: 20px;
+        right: 20px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   2. HOVER EN TARJETAS DEL CATÁLOGO
+   ---------------------------------------------------------- */
+
+/* Tarjeta del catálogo (productos.html) */
+.group-catalogo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.group-catalogo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de producto — leve zoom al hover */
+.img-articulo img {
+    transition: transform 0.4s ease;
+}
+
+.group-catalogo:hover .img-articulo img {
+    transform: scale(1.04);
+}
+
+/* Botellas en index (sección vinos) */
+.vino-1 {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.vino-1:hover {
+    transform: translateY(-6px);
+}
+
+.vino-1 img {
+    transition: transform 0.4s ease;
+}
+
+.vino-1:hover img {
+    transform: scale(1.05);
+}
+
+/* Tarjetas de ofertas (.blog-1) */
+.blog-1 {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.blog-1:hover {
+    transform: translateY(-5px);
+}
+
+.blog-1 img {
+    transition: transform 0.4s ease;
+}
+
+.blog-1:hover img {
+    transform: scale(1.04);
+}
+
+/* Categorías de productos en index (.producto-1) */
+.producto-1 {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.producto-1:hover {
+    transform: translateY(-5px);
+}
+
+.producto-1 img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.producto-1:hover img {
+    transform: scale(1.08);
+}
+
+/* Tarjetas de anchetas */
+.contacto-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: #BF9E60;
+}
+
+/* Sin hover en móvil para no interferir con touch */
+@media (max-width: 767px) {
+    .group-catalogo:hover,
+    .vino-1:hover,
+    .blog-1:hover,
+    .producto-1:hover,
+    .contacto-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   3. ANIMACIONES DE ENTRADA AL HACER SCROLL
+   ---------------------------------------------------------- */
+
+/* Estado inicial — invisible y ligeramente abajo */
+.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+/* Estado visible — activado por JS cuando entra en pantalla */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays escalonados para grupos de elementos */
+.fade-in:nth-child(2) { transition-delay: 0.1s; }
+.fade-in:nth-child(3) { transition-delay: 0.2s; }
+.fade-in:nth-child(4) { transition-delay: 0.3s; }
+.fade-in:nth-child(5) { transition-delay: 0.4s; }
+
+/* Sin animación si el usuario prefiere movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   4. BOTÓN FLOTANTE DE WHATSAPP
+   ---------------------------------------------------------- */
+
+.wa-flotante {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wa-flotante-circulo {
+    width: 56px;
+    height: 56px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.wa-flotante:hover .wa-flotante-circulo {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
+}
+
+.wa-flotante-circulo svg {
+    width: 28px;
+    height: 28px;
+    fill: #ffffff;
+}
+
+/* Etiqueta de texto que aparece al hover */
+.wa-flotante-label {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.wa-flotante:hover .wa-flotante-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Pulso de entrada al cargar la página */
+@keyframes wa-entrada {
+    from { opacity: 0; transform: scale(0.5); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.wa-flotante-circulo {
+    animation: wa-entrada 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s both;
+}
+
+@media (max-width: 767px) {
+    .wa-flotante {
+        bottom: 20px;
+        right: 20px;
+    }
+    .wa-flotante-circulo {
+        width: 50px;
+        height: 50px;
+    }
+    .wa-flotante-label {
+        display: none;
+    }
+}

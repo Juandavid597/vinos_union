@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Tags SEO Esenciales -->
+
+    <!-- Meta Tags SEO -->
     <title>Quiénes Somos - Vinos Unión | Historia y Tradición Vinícola</title>
     <meta name="description" content="Conoce la historia de Vinos Unión, nuestra misión y visión. Vinos artesanales familiares del Valle del Cauca con tradición desde 2021.">
     <meta name="keywords" content="historia vinos unión, misión visión vinos, vinos familiares valle del cauca, tradición vinícola colombiana">
     <meta name="author" content="Vinos Unión">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph para Redes Sociales -->
     <meta property="og:title" content="Quiénes Somos - Vinos Unión | Historia y Tradición Vinícola">
-    <meta property="og:description" content="Descubre la historia familiar detrás de Vinos Unión, vinos artesanales del Valle del Cauca">
-    <meta property="og:image" content="https://tudominio.com/plantillas_web_1/imagenes_web/quienes-somos.jpeg">
-    <meta property="og:url" content="https://tudominio.com/quienes_somos.html">
+    <meta property="og:description" content="Descubre la historia familiar detrás de Vinos Unión, vinos artesanales del Valle del Cauca.">
+    <meta property="og:image" content="https://www.vinosunion.com/plantillas_web_1/imagenes_web/quienes-somos.jpeg">
+    <meta property="og:url" content="https://www.vinosunion.com/quienes_somos.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Vinos Unión">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Quiénes Somos - Vinos Unión">
-    <meta name="twitter:description" content="Conoce nuestra historia familiar y tradición vinícola">
-    <meta name="twitter:image" content="https://tudominio.com/plantillas_web_1/imagenes_web/quienes-somos.jpeg">
-    
+    <meta name="twitter:description" content="Conoce nuestra historia familiar y tradición vinícola.">
+    <meta name="twitter:image" content="https://www.vinosunion.com/plantillas_web_1/imagenes_web/quienes-somos.jpeg">
+    <meta name="twitter:url" content="https://www.vinosunion.com/quienes_somos.html">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="plantillas_web_1/imagenes_web/1x/logo.png">
-    
+
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://tudominio.com/quienes_somos.html">
-    
+    <link rel="canonical" href="https://www.vinosunion.com/quienes_somos.html">
+
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Schema Markup para Empresa Familiar -->
     <script type="application/ld+json">
     {
@@ -38,7 +43,7 @@
         "@type": "Organization",
         "name": "Vinos Unión",
         "description": "Vinos artesanales familiares del Valle del Cauca",
-        "url": "https://tudominio.com",
+        "url": "https://www.vinosunion.com",
         "foundingDate": "2021",
         "founder": [
             {
@@ -64,10 +69,10 @@
         }
     }
     </script>
-    
+
     <!-- Estilos -->
     <link rel="stylesheet" href="estilos1.css">
-    <link rel="stylesheet" href="plantillas_web_1/bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="mejoras.css">
 </head>
 <body>
 
@@ -75,16 +80,19 @@
     <header class="header" role="banner">
 
         <div class="menu container">
-            <img class="logo" src="plantillas_web_1/imagenes_web/1x/logo.png" alt="Vinos Unión - Logo de vinos artesanales del Valle del Cauca">
-            
+            <img class="logo" src="plantillas_web_1/imagenes_web/1x/logo.png"
+                 alt="Vinos Unión - Logo de vinos artesanales del Valle del Cauca"
+                 width="120" height="90">
+
             <input type="checkbox" id="menu"/>
             <label for="menu">
-                <img src="plantillas_web_1/imagenes_web/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" class="menu-icono" alt="Menú de navegación">
+                <img src="plantillas_web_1/imagenes_web/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+                     class="menu-icono" alt="Abrir menú de navegación" width="25" height="25">
             </label>
             <nav class="navbar" role="navigation" aria-label="Menú principal">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="quienes_somos.html">Quiénes Somos</a></li>
+                    <li><a href="quienes_somos.html" aria-current="page">Quiénes Somos</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="anchetas.html">Anchetas</a></li>
                     <li><a href="ofertas.html">Ofertas</a></li>
@@ -95,76 +103,88 @@
         </div>
 
         <div class="header-content container">
-            <h1>Nuestra Historia - Vinos Unión</h1>
-            <h3 class="mb-5 text-white">Tradición familiar en cada botella desde 2021</h3>
+            <h1>Nuestra Historia</h1>
+            <p>Tradición familiar en cada botella desde 2021</p>
         </div>
 
     </header>
 
-    <!-- Sección Historia -->
-    <section class="historia" aria-labelledby="nuestra-historia">
-        <div class="historia-content container">
-            <div class="historia-image zone-image">
-                <img src="plantillas_web_1/imagenes_web/quienes-somos.jpeg" alt="Familia Vinos Unión trabajando en los viñedos del Valle del Cauca">    
-            </div>
-            <div class="historia-txt">
-                <h2 id="nuestra-historia">Nuestra Historia Familiar</h2>
-                <p>Vinos Unión nació de una simple pero significativa experiencia familiar que transformó nuestra pasión en un proyecto que hoy nos llena de orgullo. En octubre de 2021, durante una visita a mi familia en La Unión, Valle del Cauca, decidí llevar algunos vinos de la región como obsequio para unos amigos en Medellín. Al probarlos, quedaron tan encantados con su sabor único que surgió una idea que cambiaría el rumbo de nuestro futuro: ¿por qué no compartir estos maravillosos vinos con más personas?</p>
-                <p>Mi familia es la encargada de la producción de estos vinos, cultivados con esmero en la tierra fértil de La Unión, Valle del Cauca, una región que se destaca por su tradición vitivinícola. Así, nació Vinos Unión. Un nombre que representa la conexión entre la familia, los amigos y, sobre todo, los momentos especiales que nos unen. Creímos que no había mejor forma de transmitir ese espíritu que ofreciendo un producto que simboliza justamente eso: la unión de sabores, de experiencias y de recuerdos.</p>
-            </div>
-        </div>
-    </section>
+    <main role="main">
 
-    <!-- Sección Misión -->
-    <section class="general" aria-labelledby="nuestra-mision">
-        <div class="general-1">
-            <h2 id="nuestra-mision">Nuestra Misión</h2>
-            <p>En Vinos Unión, nuestra misión es ofrecer vinos de alta calidad, elaborados con dedicación y pasión por nuestra familia en el corazón del Valle del Cauca. Queremos compartir con nuestros clientes la tradición vinícola de La Unión, creando momentos de unión y celebración que perduren en el tiempo. Nos comprometemos a ofrecer una experiencia única a través de nuestros productos, destacando el sabor auténtico y el amor por el arte de hacer vino.</p>
-            <a href="contacto.html" class="bottone2">Conoce nuestros productos</a>
-        </div>
-        <div class="general-2" role="img" aria-label="Proceso de elaboración artesanal de vinos Vinos Unión"></div>
-    </section>
+        <!-- Sección Historia -->
+        <section class="historia" aria-labelledby="nuestra-historia">
+            <div class="historia-content container fade-in">
+                <div class="historia-image zone-image">
+                    <img src="plantillas_web_1/imagenes_web/quienes-somos.jpeg"
+                         alt="Familia Vinos Unión trabajando en los viñedos del Valle del Cauca"
+                         width="500" height="500" loading="lazy">
+                </div>
+                <div class="historia-txt">
+                    <h2 id="nuestra-historia">Nuestra Historia Familiar</h2>
+                    <p>Vinos Unión nació de una simple pero significativa experiencia familiar que transformó nuestra pasión en un proyecto que hoy nos llena de orgullo. En octubre de 2021, durante una visita a mi familia en La Unión, Valle del Cauca, decidí llevar algunos vinos de la región como obsequio para unos amigos en Medellín. Al probarlos, quedaron tan encantados con su sabor único que surgió una idea que cambiaría el rumbo de nuestro futuro: ¿por qué no compartir estos maravillosos vinos con más personas?</p>
+                    <p>Mi familia es la encargada de la producción de estos vinos, cultivados con esmero en la tierra fértil de La Unión, Valle del Cauca, una región que se destaca por su tradición vitivinícola. Así, nació Vinos Unión. Un nombre que representa la conexión entre la familia, los amigos y, sobre todo, los momentos especiales que nos unen. Creímos que no había mejor forma de transmitir ese espíritu que ofreciendo un producto que simboliza justamente eso: la unión de sabores, de experiencias y de recuerdos.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sección Visión -->
-    <section class="general" aria-labelledby="nuestra-vision">
-        <div class="general-3" role="img" aria-label="Futuro y expansión de Vinos Unión"></div>
-        <div class="general-1">
-            <h2 id="nuestra-vision">Nuestra Visión</h2>
-            <p>Ser reconocidos como una marca líder en la comercialización de vinos colombianos, inspirados en la unión familiar y de amigos. Para 2030, aspiramos a expandir nuestra presencia tanto a nivel nacional como internacional, llevando los vinos de Vinos Unión a nuevos mercados y creando experiencias que conecten a las personas con la tradición y la cultura vinícola de La Unión, Valle del Cauca.</p>
-            <a href="productos.html" class="bottone2">Descubre nuestra variedad</a>
-        </div>
-    </section>
+        <!-- Sección Misión -->
+        <section class="general fade-in" aria-labelledby="nuestra-mision">
+            <div class="general-1">
+                <h2 id="nuestra-mision">Nuestra Misión</h2>
+                <p>En Vinos Unión, nuestra misión es ofrecer vinos de alta calidad, elaborados con dedicación y pasión por nuestra familia en el corazón del Valle del Cauca. Queremos compartir con nuestros clientes la tradición vinícola de La Unión, creando momentos de unión y celebración que perduren en el tiempo. Nos comprometemos a ofrecer una experiencia única a través de nuestros productos, destacando el sabor auténtico y el amor por el arte de hacer vino.</p>
+                <a href="productos.html" class="bottone2">Descubre nuestros productos</a>
+            </div>
+            <div class="general-2" role="img" aria-label="Proceso de elaboración artesanal de vinos Vinos Unión"></div>
+        </section>
+
+        <!-- Sección Visión -->
+        <section class="general fade-in" aria-labelledby="nuestra-vision">
+            <div class="general-3" role="img" aria-label="Futuro y expansión de Vinos Unión"></div>
+            <div class="general-1">
+                <h2 id="nuestra-vision">Nuestra Visión</h2>
+                <p>Ser reconocidos como una marca líder en la comercialización de vinos colombianos, inspirados en la unión familiar y de amigos. Para 2030, aspiramos a expandir nuestra presencia tanto a nivel nacional como internacional, llevando los vinos de Vinos Unión a nuevos mercados y creando experiencias que conecten a las personas con la tradición y la cultura vinícola de La Unión, Valle del Cauca.</p>
+                <a href="productos.html" class="bottone2">Descubre nuestra variedad</a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="footer-content container">
-            <div class="link">
-                <img src="plantillas_web_1/imagenes_web/1x/logo.png" alt="Vinos Unión - Vinos artesanales familiares del Valle del Cauca">
+            <div class="link colsm-6">
+                <img src="plantillas_web_1/imagenes_web/1x/logo.png"
+                     alt="Vinos Unión - Vinos artesanales familiares del Valle del Cauca"
+                     width="100" height="75" loading="lazy">
             </div>
-            <div class="link">
+            <div class="link colsm-6">
                 <h3>Teléfono</h3>
                 <ul>
                     <li>Alexander Quintero Fernández<br> <a href="tel:+573012595478">301 259 5478</a></li>
                     <li>Stella Ortiz Cardona<br> <a href="tel:+573004941172">300 494 1172</a></li>
                 </ul>
             </div>
-            <div class="link">
+            <div class="link colsm-6">
                 <h3>Correo Electrónico</h3>
                 <ul>
                     <li><a href="mailto:vinosunion@gmail.com">vinosunion@gmail.com</a></li>
                     <li><a href="mailto:alextennis007@gmail.com">alextennis007@gmail.com</a></li>
                 </ul>
             </div>
-            <div class="link">
+            <div class="link colsm-6">
                 <h3>Síguenos en Redes Sociales</h3>
                 <p class="rrss">
-                    <a href="https://wa.me/573004941172" aria-label="Contactar por WhatsApp"><img height="30" src="plantillas_web_1/imagenes_web/1x/whatsapp-3.svg" alt="WhatsApp Vinos Unión"></a>
-                    <a href="https://www.instagram.com/alex_vinosunion/" aria-label="Seguir en Instagram"><img height="30" src="plantillas_web_1/imagenes_web/1x/instagram-2016-5.svg" alt="Instagram Vinos Unión"></a>
+                    <a href="https://wa.me/573004941172" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+                        <img height="30" width="30" src="plantillas_web_1/imagenes_web/1x/whatsapp-3.svg" alt="WhatsApp Vinos Unión" loading="lazy">
+                    </a>
+                    <a href="https://www.instagram.com/alex_vinosunion/" aria-label="Seguir en Instagram" target="_blank" rel="noopener">
+                        <img height="30" width="30" src="plantillas_web_1/imagenes_web/1x/instagram-2016-5.svg" alt="Instagram Vinos Unión" loading="lazy">
+                    </a>
                 </p>
             </div>
         </div>
     </footer>
 
-    <script src="plantillas_web_1/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="mejoras.js"></script>
 </body>
 </html>
