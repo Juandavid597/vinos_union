@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mensaje ? 'Mensaje: ' + mensaje : ''
         ].filter(Boolean).join('\n');
 
-        const urlWhatsApp = 'https://wa.me/573004941172?text=' + encodeURIComponent(texto);
+        const urlWhatsApp = 'https://wa.me/573004732293?text=' + encodeURIComponent(texto);
 
         // Mostrar confirmación y abrir WhatsApp
         const exito = document.getElementById('form-exito');
