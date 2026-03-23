@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mensaje = encodeURIComponent('¡Hola Vinos Unión! Me gustaría hacer un pedido.');
 
     const boton = document.createElement('a');
-    boton.href = 'https://wa.me/573004732293?text=' + mensaje;
+    boton.href = 'https://wa.me/573004941172?text=' + mensaje;
     boton.target = '_blank';
     boton.rel = 'noopener noreferrer';
     boton.className = 'wa-flotante';
